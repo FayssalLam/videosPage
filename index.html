@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+  <title>Videos Feed</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
+          <div class="form-group">
+            <label for="quick-search">Search</label>
+            <input type="text" class="form-control" id="quick-search" placeholder="Search ...">
+          </div>
+          <div class="form-group">
+            <select id="selectPerPage" class="form-control">
+              <option value="10">10</option>
+              <option class="25">25</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>
+              <input id="moreTen" type="checkbox" value="">
+              Users that have more than 10 likes
+            </label>
+          </div>
+        </div>
+        <!--/sidebar-->
+        <div id="container" class="col-xs-12 col-sm-8 col-md-9 videosContainer">
+          <div id="videos" class="row">
+
+          </div>
+          <!--/row-->
+
+          <nav id="pagination" aria-label="...">
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--/.col-xs-12.col-sm-9-->
+
+      </div>
+      <!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>© 2017</p>
+      </footer>
+
+    </div>
+    <script src="./assets/jquery.min.js.téléchargement"></script>
+    <script>
+      window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+  </body>
+
+  <template id="video-template">
+    <div class="col-sm-6 col-md-12">
+      <div class="oneVideo">
+        <a class="user-picture authorlink" href="">
+          <div class="">
+            <img id="authorImg" src="">
+          </div>
+
+        </a>
+
+
+        <div class="video-info">
+          <a class="authorTitle" href="">
+            <h2 class="author auth"></h2>
+          </a>
+
+       <!--  <span class="video">
+       </span> -->
+       <div class="caption thumbnail">
+        <a target="_blank" class="videolink" href="">
+          <img class="videoPicture" src="">
+          <h3 class="title">
+            <!--title-->
+          </h3>
+        </a>
+        
+        <p class="description">
+          <!--description-->
+        </p>
+        <p class="interaction">
+          <span class="views"></span>
+          <span class="likes"></span>
+          <span class="comments"></span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</template>
+
+<script src="./data/feed.js"></script>
+<script src="./script/app.js"></script>
+
+</html>
